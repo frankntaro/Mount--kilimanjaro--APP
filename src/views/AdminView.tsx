@@ -25,15 +25,16 @@ import {
   Trees,
   FileText,
   DollarSign,
-  Save,
-  LogOut,
-  KeyRound,
-  Lock,
-  Eye,
-  EyeOff,
-  Globe,
-  Menu,
-  X
+  Save, 
+  LogOut, 
+  KeyRound, 
+  Lock, 
+  Eye, 
+  EyeOff, 
+  Globe, 
+  Menu, 
+  X,
+  Send
 } from 'lucide-react';
 import { 
   AdminInquiry, 

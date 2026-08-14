@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { KILIMANJARO_ROUTES, SAFARI_PACKAGES } from '../data/kilimanjaroData';
-import { X, Calendar, CheckCircle2, Mountain, Compass, ShieldCheck, Tag } from 'lucide-react';
+import { X, Calendar, CheckCircle2, Mountain, Compass, ShieldCheck, Tag, MessageSquare } from 'lucide-react';
 import { useTranslation } from '../i18n/useTranslation';
 import { saveNewInquiry } from '../services/inquiryStorage';
 
