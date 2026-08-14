@@ -1,0 +1,23 @@
+{
+  "short_name": "Vamos Kilimanjaro",
+  "name": "Vamos Kilimanjaro - Mount Kilimanjaro Trekking & Safaris",
+  "icons": [
+    {
+      "src": "/images/pwa-icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/logo.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#111827",
+  "theme_color": "#2d5a27",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "description": "Progressive Web Application for Mount Kilimanjaro Trekking, Safari Packages, and Expedition Planning in Tanzania."
+}

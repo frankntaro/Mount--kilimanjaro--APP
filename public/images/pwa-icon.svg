@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="128" fill="#064e3b"/>
+  <circle cx="256" cy="180" r="80" fill="#f59e0b"/>
+  <!-- Mountain -->
+  <polygon points="60,430 256,120 452,430" fill="#022c22"/>
+  <polygon points="256,120 300,190 275,180 256,200 237,180 212,190" fill="#ffffff"/>
+  <polygon points="120,430 200,280 280,430" fill="#065f46" opacity="0.8"/>
+  <polygon points="200,280 220,315 208,310 200,320 192,310 180,315" fill="#e2e8f0"/>
+  <!-- Text -->
+  <text x="256" y="475" font-family="sans-serif" font-weight="900" font-size="32" fill="#ffffff" text-anchor="middle" letter-spacing="4">VAMOS PWA</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mountainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#065f46" />
+      <stop offset="100%" stop-color="#022c22" />
+    </linearGradient>
+    <linearGradient id="snowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+  </defs>
+  <!-- Circle Background -->
+  <circle cx="100" cy="100" r="95" fill="url(#mountainGrad)" stroke="#059669" stroke-width="4"/>
+  <!-- Sun/Golden Peak Glow -->
+  <circle cx="100" cy="65" r="28" fill="url(#goldGrad)" opacity="0.9"/>
+  <!-- Mountain Silhouette Base -->
+  <polygon points="20,165 100,45 180,165" fill="#064e3b" />
+  <!-- Snow Cap Peak -->
+  <polygon points="100,45 118,75 108,70 100,78 92,70 82,75" fill="url(#snowGrad)" />
+  <!-- Secondary Mountain Peak -->
+  <polygon points="40,165 75,95 110,165" fill="#047857" opacity="0.7"/>
+  <polygon points="75,95 85,115 78,112 75,118 72,112 65,115" fill="url(#snowGrad)" opacity="0.9"/>
+  <!-- Compass Star Accents -->
+  <path d="M100 20 L103 28 L111 31 L103 34 L100 42 L97 34 L89 31 L97 28 Z" fill="#fbbf24"/>
+  <!-- Text Label Frame -->
+  <text x="100" y="152" font-family="'Outfit', sans-serif" font-weight="900" font-size="14" fill="#ffffff" text-anchor="middle" letter-spacing="2">VAMOS</text>
+  <text x="100" y="165" font-family="'Outfit', sans-serif" font-weight="800" font-size="9" fill="#34d399" text-anchor="middle" letter-spacing="3">KILIMANJARO</text>
+</svg>

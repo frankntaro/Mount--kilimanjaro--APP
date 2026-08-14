@@ -1,0 +1,6 @@
+{
+  "name": "Vamos Kilimanjaro",
+  "description": "Progressive Web Application for Mount Kilimanjaro Trekking, Safari Packages, and Expedition Planning in Tanzania.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
