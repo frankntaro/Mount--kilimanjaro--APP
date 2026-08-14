@@ -95,6 +95,7 @@ const VALID_TABS: readonly ActiveTab[] = ['home', 'about', 'routes', 'safaris', 
 function resolveInitialTab(): ActiveTab {
   try {
     const rawHash = (window.location.hash.replace(/^#/, '') || '').toLowerCase();
+    if (rawHash === 'settings' || rawHash === 'password' || rawHash === 'security' || rawHash === 'admin-settings') return 'admin';
     if (VALID_TABS.includes(rawHash as ActiveTab)) return rawHash as ActiveTab;
     if (rawHash.startsWith('route-')) return 'routes';
     if (rawHash === 'book' || rawHash === 'booking') return 'home';
@@ -108,6 +109,19 @@ function resolveInitialTab(): ActiveTab {
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<ActiveTab>(resolveInitialTab);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const rawHash = (window.location.hash.replace(/^#/, '') || '').toLowerCase();
+      if (rawHash === 'settings' || rawHash === 'password' || rawHash === 'security' || rawHash === 'admin-settings') {
+        setActiveTab('admin');
+      } else if (VALID_TABS.includes(rawHash as ActiveTab)) {
+        setActiveTab(rawHash as ActiveTab);
+      }
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
   const [selectedRouteForModal, setSelectedRouteForModal] = useState<Route | null>(null);
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
   const [selectedBookingRouteId, setSelectedBookingRouteId] = useState<string | undefined>(undefined);

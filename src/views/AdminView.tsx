@@ -231,7 +231,16 @@ export const AdminView: React.FC<AdminViewProps> = ({
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(checkIsAdminAuthenticated);
   const [sessionEmail, setSessionEmail] = useState<string>(getAdminSessionEmail);
 
-  const [activeTab, setActiveTab] = useState<AdminTab>('inquiries');
+  const [activeTab, setActiveTab] = useState<AdminTab>(() => {
+    try {
+      const h = window.location.hash.toLowerCase();
+      if (h === '#settings' || h === '#password' || h === '#security' || h === '#admin-settings') return 'settings';
+      if (h === '#pricing' || h === '#tariffs' || h === '#prices') return 'pricing';
+      if (h === '#gallery' || h === '#photos') return 'gallery';
+      if (h === '#sections' || h === '#images') return 'sections';
+    } catch {}
+    return 'inquiries';
+  });
   const [mediaMode, setMediaMode] = useState<'sections' | 'gallery'>('sections');
   const [inquiries, setInquiries] = useState<AdminInquiry[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -935,6 +944,20 @@ export const AdminView: React.FC<AdminViewProps> = ({
             </div>
 
             <button
+              onClick={() => setActiveTab('settings')}
+              id="admin-header-settings-btn"
+              className={`flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 py-1.5 sm:py-2 text-xs font-black uppercase rounded-xl transition-all min-h-[36px] sm:min-h-[38px] ${
+                activeTab === 'settings'
+                  ? 'bg-emerald-700 text-white shadow-xs'
+                  : 'bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 shadow-xs'
+              }`}
+              title="Manage notification email and admin password"
+            >
+              <KeyRound className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600" />
+              <span>{t.admin.tabSettings}</span>
+            </button>
+
+            <button
               onClick={() => setActiveTab('gallery')}
               id="admin-header-upload-gallery-btn"
               className="flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 py-1.5 sm:py-2 bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white text-xs font-black uppercase rounded-xl shadow-xs transition-all min-h-[36px] sm:min-h-[38px]"
@@ -1251,7 +1274,7 @@ export const AdminView: React.FC<AdminViewProps> = ({
             )}
           </button>
 
-          {/* TAB 4: SETTINGS */}
+          {/* TAB 4: SETTINGS & PASSWORDS */}
           <button
             onClick={() => setActiveTab('settings')}
             id="admin-tab-settings"
@@ -1261,7 +1284,7 @@ export const AdminView: React.FC<AdminViewProps> = ({
                 : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
             }`}
           >
-            <FileText className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+            <KeyRound className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-400" />
             <span>{t.admin.tabSettings}</span>
           </button>
         </div>
