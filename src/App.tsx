@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { ActiveTab, Route, SafariPackage } from './types';
 import { KILIMANJARO_ROUTES, SAFARI_PACKAGES } from './data/kilimanjaroData';
 import { IMAGES, DEFAULT_IMAGES } from './data/images';
@@ -25,16 +25,24 @@ import { BookingModal } from './components/BookingModal';
 import { RouteDetailModal } from './components/RouteDetailModal';
 import { PwaInstallBanner } from './components/PwaInstallBanner';
 
-import { AboutView } from './views/AboutView';
-import { RoutesView } from './views/RoutesView';
-import { SafariView } from './views/SafariView';
-import { PlanView } from './views/PlanView';
-import { ConservationView } from './views/ConservationView';
-import { BlogView } from './views/BlogView';
-import { ContactView } from './views/ContactView';
-import { AdminView } from './views/AdminView';
+// Lazy-loaded views for instant initial page loading and maximum performance
+const AboutView = lazy(() => import('./views/AboutView').then(m => ({ default: m.AboutView })));
+const RoutesView = lazy(() => import('./views/RoutesView').then(m => ({ default: m.RoutesView })));
+const SafariView = lazy(() => import('./views/SafariView').then(m => ({ default: m.SafariView })));
+const PlanView = lazy(() => import('./views/PlanView').then(m => ({ default: m.PlanView })));
+const ConservationView = lazy(() => import('./views/ConservationView').then(m => ({ default: m.ConservationView })));
+const BlogView = lazy(() => import('./views/BlogView').then(m => ({ default: m.BlogView })));
+const ContactView = lazy(() => import('./views/ContactView').then(m => ({ default: m.ContactView })));
+const AdminView = lazy(() => import('./views/AdminView').then(m => ({ default: m.AdminView })));
 
 import { X } from 'lucide-react';
+
+const ViewLoadingFallback = () => (
+  <div className="min-h-[50vh] flex flex-col items-center justify-center py-20">
+    <div className="w-10 h-10 border-4 border-emerald-700 border-t-transparent rounded-full animate-spin"></div>
+    <span className="mt-3 text-xs font-bold text-slate-500 uppercase tracking-wider">Loading...</span>
+  </div>
+);
 
 const VALID_LANGUAGES = new Set<Language>(AVAILABLE_LANGUAGES.map((l) => l.code));
 
@@ -389,19 +397,21 @@ export default function App() {
   if (activeTab === 'admin') {
     return (
       <TranslationContext.Provider value={createTranslationContext(currentLang)}>
-        <AdminView
-          onBackToSite={() => handleNavigateTab('home')}
-          currentOverrides={customImageOverrides}
-          onUpdateImages={(overrides) => setCustomImageOverrides(overrides)}
-          galleryImages={galleryImages}
-          onUpdateGallery={(updatedGallery) => setGalleryImages(updatedGallery)}
-          customPrices={customPrices}
-          onUpdatePrices={(newPrices) => setCustomPrices(newPrices)}
-          safariPackages={safariPackages}
-          onUpdateSafaris={(updatedSafaris) => setSafariPackages(updatedSafaris)}
-          currentLang={currentLang}
-          onLanguageChange={setCurrentLang}
-        />
+        <Suspense fallback={<ViewLoadingFallback />}>
+          <AdminView
+            onBackToSite={() => handleNavigateTab('home')}
+            currentOverrides={customImageOverrides}
+            onUpdateImages={(overrides) => setCustomImageOverrides(overrides)}
+            galleryImages={galleryImages}
+            onUpdateGallery={(updatedGallery) => setGalleryImages(updatedGallery)}
+            customPrices={customPrices}
+            onUpdatePrices={(newPrices) => setCustomPrices(newPrices)}
+            safariPackages={safariPackages}
+            onUpdateSafaris={(updatedSafaris) => setSafariPackages(updatedSafaris)}
+            currentLang={currentLang}
+            onLanguageChange={setCurrentLang}
+          />
+        </Suspense>
       </TranslationContext.Provider>
     );
   }
@@ -493,29 +503,31 @@ export default function App() {
             </div>
           )}
 
-          {activeTab === 'about' && <AboutView onPlanClimb={() => handleNavigateTab('plan')} />}
+          <Suspense fallback={<ViewLoadingFallback />}>
+            {activeTab === 'about' && <AboutView onPlanClimb={() => handleNavigateTab('plan')} />}
 
-          {activeTab === 'routes' && (
-            <RoutesView
-              onSelectRoute={handleSelectRoute}
-              onBookRoute={(routeId) => handleOpenBooking(routeId)}
-            />
-          )}
+            {activeTab === 'routes' && (
+              <RoutesView
+                onSelectRoute={handleSelectRoute}
+                onBookRoute={(routeId) => handleOpenBooking(routeId)}
+              />
+            )}
 
-          {activeTab === 'safaris' && (
-            <SafariView 
-              packages={safariPackages}
-              onBookSafari={(safariId) => handleOpenBooking(undefined, safariId)} 
-            />
-          )}
+            {activeTab === 'safaris' && (
+              <SafariView 
+                packages={safariPackages}
+                onBookSafari={(safariId) => handleOpenBooking(undefined, safariId)} 
+              />
+            )}
 
-          {activeTab === 'plan' && <PlanView />}
+            {activeTab === 'plan' && <PlanView />}
 
-          {activeTab === 'conservation' && <ConservationView />}
+            {activeTab === 'conservation' && <ConservationView />}
 
-          {activeTab === 'blog' && <BlogView />}
+            {activeTab === 'blog' && <BlogView />}
 
-          {activeTab === 'contact' && <ContactView />}
+            {activeTab === 'contact' && <ContactView />}
+          </Suspense>
         </main>
 
         <Footer
