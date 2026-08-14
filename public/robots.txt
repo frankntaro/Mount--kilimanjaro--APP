@@ -4,4 +4,4 @@ Allow: /
 Disallow: /admin
 
 # Sitemaps
-Sitemap: https://vamoskilimanjaro.com/sitemap.xml
+Sitemap: https://mount-kilimanjaro-app.vercel.app/sitemap.xml
