@@ -5,7 +5,7 @@ export const ROUTE_IMAGES: Record<string, ImageAsset> = {
     id: 'route_machame',
     url: new URL('./M2.jpeg', import.meta.url).href,
     alt: 'Machame Whiskey Route climbers hiking through rainforest and moorland',
-    caption: 'Machame 7-Day Route Trail',
+    caption: 'Machame 6-Day Route Trail',
     category: 'route',
     aspectRatio: '4:3',
     layoutTarget: 'PopularRoutes, RoutesView, RouteDetailModal'
@@ -14,7 +14,16 @@ export const ROUTE_IMAGES: Record<string, ImageAsset> = {
     id: 'route_lemosho',
     url: new URL('./M3.jpeg', import.meta.url).href,
     alt: 'Lemosho Route scenic high ridge sunset',
-    caption: 'Lemosho 8-Day Panoramic Route',
+    caption: 'Lemosho 6-Day Panoramic Route',
+    category: 'route',
+    aspectRatio: '4:3',
+    layoutTarget: 'PopularRoutes, RoutesView, RouteDetailModal'
+  },
+  shira: {
+    id: 'route_shira',
+    url: new URL('./M1.jpeg', import.meta.url).href,
+    alt: 'Londorossi / Shira Route high volcanic plateau traverse',
+    caption: 'Londorossi / Shira 6-Day Caldera Route',
     category: 'route',
     aspectRatio: '4:3',
     layoutTarget: 'PopularRoutes, RoutesView, RouteDetailModal'
@@ -32,7 +41,7 @@ export const ROUTE_IMAGES: Record<string, ImageAsset> = {
     id: 'route_marangu',
     url: new URL('./M5.jpeg', import.meta.url).href,
     alt: 'Marangu Coca-Cola Route trail and mountain huts',
-    caption: 'Marangu 6-Day Hut Route',
+    caption: 'Marangu 5-Day Hut Route',
     category: 'route',
     aspectRatio: '4:3',
     layoutTarget: 'RoutesView, RouteDetailModal'
@@ -41,7 +50,16 @@ export const ROUTE_IMAGES: Record<string, ImageAsset> = {
     id: 'route_rongai',
     url: new URL('./M6.jpeg', import.meta.url).href,
     alt: 'Rongai northern border wilderness trail',
-    caption: 'Rongai 7-Day North Slope Route',
+    caption: 'Rongai 6-Day North Slope Route',
+    category: 'route',
+    aspectRatio: '4:3',
+    layoutTarget: 'RoutesView, RouteDetailModal'
+  },
+  rongai5: {
+    id: 'route_rongai5',
+    url: new URL('./M6.jpeg', import.meta.url).href,
+    alt: 'Rongai northern border express route',
+    caption: 'Rongai 5-Day Direct Route',
     category: 'route',
     aspectRatio: '4:3',
     layoutTarget: 'RoutesView, RouteDetailModal'
@@ -50,7 +68,7 @@ export const ROUTE_IMAGES: Record<string, ImageAsset> = {
     id: 'route_umbwe',
     url: new URL('./M7.jpeg', import.meta.url).href,
     alt: 'Steep rocky ridge on Umbwe route',
-    caption: 'Umbwe 6-Day Extreme Ascent Route',
+    caption: 'Umbwe 5-Day Steep Ascent Route',
     category: 'route',
     aspectRatio: '4:3',
     layoutTarget: 'RoutesView, RouteDetailModal'

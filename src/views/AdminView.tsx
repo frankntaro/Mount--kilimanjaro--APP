@@ -142,6 +142,13 @@ const SECTION_IMAGE_CONFIGS: ImageSectionConfig[] = [
     recommendedResolution: '1200x800 (Shira Plateau or rainforest view)'
   },
   {
+    key: 'shira',
+    name: 'Londorossi / Shira Route (Caldera Traverse)',
+    category: 'Routes',
+    locationDesc: 'Routes View listing and detail modal',
+    recommendedResolution: '1200x800 (Shira caldera and western breach)'
+  },
+  {
     key: 'northernCircuit',
     name: 'Northern Circuit (360° Panorama)',
     category: 'Routes',

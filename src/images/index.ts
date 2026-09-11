@@ -67,9 +67,11 @@ const IMAGES_BASE = {
 
   machame: ROUTE_IMAGES.machame.url,
   lemosho: ROUTE_IMAGES.lemosho.url,
+  shira: ROUTE_IMAGES.shira.url,
   northernCircuit: ROUTE_IMAGES.northernCircuit.url,
   marangu: ROUTE_IMAGES.marangu.url,
   rongai: ROUTE_IMAGES.rongai.url,
+  rongai5: ROUTE_IMAGES.rongai5.url,
   umbwe: ROUTE_IMAGES.umbwe.url,
 
   safariElephants: SAFARI_IMAGES.serengetiElephants.url,

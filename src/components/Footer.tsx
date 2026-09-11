@@ -289,6 +289,14 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
               <li>
                 <button
+                  onClick={() => handleRouteClick('shira')}
+                  className="hover:text-emerald-400 transition-colors text-left block py-0.5"
+                >
+                  {t.footer.shiraLink || 'Londorossi / Shira 6-Day'}
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => handleRouteClick('northern-circuit')}
                   className="hover:text-emerald-400 transition-colors text-left block py-0.5"
                 >

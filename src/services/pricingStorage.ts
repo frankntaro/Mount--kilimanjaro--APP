@@ -17,18 +17,27 @@ export interface PackageOverrides {
 }
 
 export const DEFAULT_ROUTE_CONFIGS: Record<string, RouteTariff> = {
-  machame: { priceUSD: 2350, days: 7 },
-  lemosho: { priceUSD: 2650, days: 8 },
+  machame: { priceUSD: 2150, days: 6 },
+  lemosho: { priceUSD: 2350, days: 6 },
+  shira: { priceUSD: 2250, days: 6 },
   'northern-circuit': { priceUSD: 2950, days: 9 },
-  marangu: { priceUSD: 1980, days: 6 },
-  rongai: { priceUSD: 2550, days: 7 },
-  umbwe: { priceUSD: 2350, days: 6 },
+  marangu: { priceUSD: 1750, days: 5 },
+  rongai: { priceUSD: 2250, days: 6 },
+  'rongai-5': { priceUSD: 1980, days: 5 },
+  umbwe: { priceUSD: 2100, days: 5 },
 };
 
 export const DEFAULT_SAFARI_CONFIGS: Record<string, SafariTariff> = {
   'serengeti-ngorongoro': { priceUSD: 1450, days: 4 },
   'tarangire-manyara': { priceUSD: 680, days: 2 },
   'zanzibar-beach': { priceUSD: 890, days: 4 },
+  'chemka-hotsprings': { priceUSD: 95, days: 1 },
+  'materuni-waterfalls': { priceUSD: 85, days: 1 },
+  'serval-wildlife': { priceUSD: 220, days: 1 },
+  'marangu-day-trip': { priceUSD: 170, days: 1 },
+  'moshi-town-tour': { priceUSD: 65, days: 1 },
+  'rau-forest': { priceUSD: 70, days: 1 },
+  'lake-chala': { priceUSD: 115, days: 1 },
 };
 
 export const DEFAULT_GEAR_RENTAL = 150;
@@ -43,17 +52,26 @@ export const DEFAULT_PACKAGE_OVERRIDES: PackageOverrides = {
 export type PriceOverrides = PackageOverrides;
 export const DEFAULT_PRICE_OVERRIDES = DEFAULT_PACKAGE_OVERRIDES;
 export const DEFAULT_ROUTE_PRICES: Record<string, number> = {
-  machame: 2350,
-  lemosho: 2650,
+  machame: 2150,
+  lemosho: 2350,
+  shira: 2250,
   'northern-circuit': 2950,
-  marangu: 1980,
-  rongai: 2550,
-  umbwe: 2350,
+  marangu: 1750,
+  rongai: 2250,
+  'rongai-5': 1980,
+  umbwe: 2100,
 };
 export const DEFAULT_SAFARI_PRICES: Record<string, number> = {
   'serengeti-ngorongoro': 1450,
   'tarangire-manyara': 680,
   'zanzibar-beach': 890,
+  'chemka-hotsprings': 95,
+  'materuni-waterfalls': 85,
+  'serval-wildlife': 220,
+  'marangu-day-trip': 170,
+  'moshi-town-tour': 65,
+  'rau-forest': 70,
+  'lake-chala': 115,
 };
 
 const STORAGE_KEY = 'vamos_custom_prices';

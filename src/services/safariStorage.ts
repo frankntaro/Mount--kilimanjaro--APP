@@ -19,7 +19,8 @@ export const DEFAULT_SAFARI_PACKAGES_COPY: SafariPackage[] = [
       '4x4 Land Cruiser with pop-up roof',
       'Luxury lodge/tent accommodation'
     ],
-    bestSeason: 'Year-Round (Migration Jul-Oct & Jan-Mar)'
+    bestSeason: 'Year-Round (Migration Jul-Oct & Jan-Mar)',
+    category: 'safari'
   },
   {
     id: 'tarangire-manyara',
@@ -35,7 +36,8 @@ export const DEFAULT_SAFARI_PACKAGES_COPY: SafariPackage[] = [
       'Pink flamingo flocks',
       'Picnic lunch in wild bush'
     ],
-    bestSeason: 'Year-Round'
+    bestSeason: 'Year-Round',
+    category: 'safari'
   },
   {
     id: 'zanzibar-beach',
@@ -51,7 +53,127 @@ export const DEFAULT_SAFARI_PACKAGES_COPY: SafariPackage[] = [
       'Stone Town historic walk',
       'Fresh seafood banquets'
     ],
-    bestSeason: 'Year-Round'
+    bestSeason: 'Year-Round',
+    category: 'beach'
+  },
+  {
+    id: 'chemka-hotsprings',
+    name: 'Chemka (Kikuletwa) Hot Springs Day Trip',
+    days: 1,
+    parks: ['Moshi / Boma Ng\'ombe', 'Geothermal Oasis', 'Kikuletwa Springs'],
+    description: 'Immerse yourself in crystal-clear turquoise geothermal waters sheltered by towering fig and palm trees. Enjoy natural fish pedicure nibbles, rope swinging into deep warm pools, and a delicious Tanzanian picnic lunch.',
+    priceUSD: 95,
+    image: new URL('../images/M26.jpeg', import.meta.url).href,
+    highlights: [
+      'Crystal-clear warm turquoise geothermal waters',
+      'Rope swing jumping into natural spring pool',
+      'Natural fish spa pedicure in mineral waters',
+      'Fresh hot Tanzanian local picnic lunch & drinks'
+    ],
+    bestSeason: 'Year-Round',
+    category: 'daytrip'
+  },
+  {
+    id: 'materuni-waterfalls',
+    name: 'Materuni Waterfalls & Chagga Coffee Tour',
+    days: 1,
+    parks: ['Materuni Village', 'Chagga Foothills', 'Kilimanjaro Slopes'],
+    description: 'Hike through lush Chagga farmland to the stunning 80-meter Materuni Waterfall. Take a refreshing swim in the mountain pool, then participate in a traditional coffee-making experience from bean picking and roasting to grinding and brewing fresh organic Kilimanjaro coffee.',
+    priceUSD: 85,
+    image: new URL('../images/M28.jpeg', import.meta.url).href,
+    highlights: [
+      '80m high dramatic Materuni Waterfall hike',
+      'Swim in natural volcanic mountain pool',
+      'Hands-on Chagga coffee roasting & brewing ceremony',
+      'Traditional Chagga hot lunch & banana beer tasting'
+    ],
+    bestSeason: 'Year-Round',
+    category: 'daytrip'
+  },
+  {
+    id: 'serval-wildlife',
+    name: 'Serval Wildlife Sanctuary Experience',
+    days: 1,
+    parks: ['Siha District', 'Wildlife Sanctuary', 'Kilimanjaro Ecosystem'],
+    description: 'An unforgettable ethical wildlife interaction in the foothills of Mount Kilimanjaro. Get up close with rescued African animals including majestic lions, serval cats, giraffes, zebras, and elands with breathtaking views of Mount Meru and Kilimanjaro.',
+    priceUSD: 220,
+    image: new URL('../images/M30.jpeg', import.meta.url).href,
+    highlights: [
+      'Close-up ethical wildlife interaction & feeding',
+      'Rescued lions, serval cats, giraffes & zebras',
+      'Spectacular panoramic views of Mt. Meru & Kibo',
+      'VIP guided educational animal behavior tour'
+    ],
+    bestSeason: 'Year-Round',
+    category: 'daytrip'
+  },
+  {
+    id: 'marangu-day-trip',
+    name: 'Kilimanjaro 1-Day Trek (Marangu Gate to Mandara Hut)',
+    days: 1,
+    parks: ['Kilimanjaro National Park', 'Mandara Hut (2,700m)', 'Maundi Crater'],
+    description: 'Experience Mount Kilimanjaro in a single day! Trek through the lush montane rainforest from Marangu Gate (1,870m) up to Mandara Hut (2,700m). Explore the volcanic Maundi Crater with breathtaking views into Kenya and spot blue monkeys and colobus monkeys along the trail.',
+    priceUSD: 170,
+    image: new URL('../images/M5.jpeg', import.meta.url).href,
+    highlights: [
+      'Experience climbing Kilimanjaro in 1 day',
+      'Trek through lush rainforest to Mandara Hut (2,700m)',
+      'Maundi Crater panoramic viewpoint into Kenya',
+      'National Park entrance fees & picnic lunch included'
+    ],
+    bestSeason: 'Year-Round',
+    category: 'daytrip'
+  },
+  {
+    id: 'moshi-town-tour',
+    name: 'Moshi Cultural & Historical Town Tour',
+    days: 1,
+    parks: ['Moshi Town', 'Central Market', 'Old Railway Station'],
+    description: 'Discover the vibrant heart of Moshi town nestled at the base of Mount Kilimanjaro. Visit the bustling Central Market with exotic spices and fruits, the historic German Old Railway Station with iconic mountain photo spots, local artisan crafts, and enjoy authentic Swahili street food.',
+    priceUSD: 65,
+    image: new URL('../images/M32.jpeg', import.meta.url).href,
+    highlights: [
+      'Vibrant Moshi Central Market & spice stalls',
+      'Historic Old Railway Station with Kilimanjaro view',
+      'Local Tanzanian artisan workshops & souvenir market',
+      'Authentic Swahili street food & local coffee stop'
+    ],
+    bestSeason: 'Year-Round',
+    category: 'cultural'
+  },
+  {
+    id: 'rau-forest',
+    name: 'Rau Forest Eco-Reserve & Colobus Monkey Walk',
+    days: 1,
+    parks: ['Rau Eco-Forest', 'Groundwater Reserve', 'Moshi Outskirts'],
+    description: 'Explore the protected Rau Groundwater Forest on foot or by bicycle. Encounter troops of Black-and-White Colobus and Blue Monkeys, discover the 200-year-old sacred Mvule tree, enjoy peaceful rice paddy vistas, and participate in our active tree planting conservation initiative.',
+    priceUSD: 70,
+    image: new URL('../images/M14.jpeg', import.meta.url).href,
+    highlights: [
+      'Black-and-White Colobus monkey troop encounters',
+      '200-year-old giant sacred Mvule tree',
+      'Serene forest walking or cycling eco-trails',
+      'Tree planting activity supporting forest conservation'
+    ],
+    bestSeason: 'Year-Round',
+    category: 'daytrip'
+  },
+  {
+    id: 'lake-chala',
+    name: 'Lake Chala Caldera & Kayaking Day Trip',
+    days: 1,
+    parks: ['Lake Chala Caldera', 'Taveta Border', 'Crater Lake'],
+    description: 'Journey to Lake Chala, a stunning 100-meter deep volcanic crater lake on the border of Tanzania and Kenya. Hike down the steep crater rim, enjoy optional kayaking on emerald waters, observe diverse bird species, and enjoy a picnic lunch overlooking the caldera.',
+    priceUSD: 115,
+    image: new URL('../images/M19.jpeg', import.meta.url).href,
+    highlights: [
+      'Stunning emerald volcanic caldera lake',
+      'Crater rim hike with 360-degree panoramas',
+      'Optional kayaking and swimming in calm waters',
+      'Picnic lunch overlooking the Kenya border'
+    ],
+    bestSeason: 'Year-Round',
+    category: 'daytrip'
   }
 ];
 

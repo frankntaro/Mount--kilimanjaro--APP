@@ -41,6 +41,7 @@ export interface SafariPackage {
   image: string;
   highlights: string[];
   bestSeason: string;
+  category?: 'safari' | 'daytrip' | 'cultural' | 'beach';
 }
 
 export interface Testimonial {

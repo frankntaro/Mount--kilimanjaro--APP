@@ -84,9 +84,11 @@ function resolveInitialLanguage(): Language {
 const ROUTE_IMAGE_KEYS: Record<string, keyof typeof DEFAULT_IMAGES> = {
   machame: 'machame',
   lemosho: 'lemosho',
+  shira: 'shira',
   'northern-circuit': 'northernCircuit',
   marangu: 'marangu',
   rongai: 'rongai',
+  'rongai-5': 'rongai5',
   umbwe: 'umbwe',
 };
 

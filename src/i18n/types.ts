@@ -111,6 +111,7 @@ export interface Translations {
     climbingRoutes: string;
     machameLink: string;
     lemoshoLink: string;
+    shiraLink?: string;
     northernLink: string;
     maranguLink: string;
     rongaiLink: string;
@@ -259,6 +260,7 @@ export interface Translations {
     heroBg: string;
     machame: string;
     lemosho: string;
+    shira?: string;
     northernCircuit: string;
     marangu: string;
     safariElephants: string;
@@ -278,6 +280,8 @@ export interface Translations {
     machameDesc: string;
     lemosho: string;
     lemoshoDesc: string;
+    shira?: string;
+    shiraDesc?: string;
     northernCircuit: string;
     northernCircuitDesc: string;
     marangu: string;
@@ -454,6 +458,10 @@ export interface Translations {
     subtitle: string;
     keyHighlights: string;
     bookThisSafari: string;
+    filterAll?: string;
+    filterDayTrips?: string;
+    filterSafaris?: string;
+    filterBeach?: string;
   };
   common: {
     loading: string;
