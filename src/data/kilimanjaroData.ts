@@ -764,7 +764,7 @@ export const KILIMANJARO_ROUTES: Route[] = [
         title: 'Shira 1 (3,610m) to Shira 2 Camp (3,850m)',
         startElevation: 3610,
         endElevation: 3850,
-        distanceKm: 7,
+        distanceKm: 10,
         hikingHours: '3-4 hours',
         habitat: 'Moorland',
         description: 'Traverse the eastern plateau enjoying gentle acclimatization toward Shira 2 (3,850m).',
