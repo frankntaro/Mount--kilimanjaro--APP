@@ -20,11 +20,8 @@ export const KILIMANJARO_ROUTES: Route[] = [
     accommodation: 'Camping',
     includedItems: [
       'All National Park entry, rescue & camping fees',
-      'Professional mountain guides & porters',
-      '3 fresh warm meals daily + boiled drinking water',
-      'Mountain Hardwear 4-season tents & mess tent',
-      'Pulse oximeter daily health checks & emergency oxygen',
-      'Pre & post climb hotel transfers'
+      'Professional mountain guides & porters'
+   
     ],
     elevationProfile: [
       { day: 1, elevation: 1640, label: 'Machame Gate' },
@@ -85,7 +82,7 @@ export const KILIMANJARO_ROUTES: Route[] = [
       },
       {
         day: 5,
-        title: 'SUMMIT DAY: Barafu (4,673m) to Uhuru Peak (5,895m) to Milenium Camp (3,100m)',
+        title: 'SUMMIT DAY: Barafu (4,673m) to Uhuru Peak (5,895m) to Milenium Camp (3,950m)',
         startElevation: 4673,
         endElevation: 3100,
         distanceKm: 14,
@@ -96,8 +93,8 @@ export const KILIMANJARO_ROUTES: Route[] = [
       },
       {
         day: 6,
-        title: 'Milenium Camp (3,100m) to Mweka camp to Mweka Gate (1,640m) & Celebration',
-        startElevation: 3100,
+        title: 'Milenium Camp (3,950m) to Mweka camp (3,100m) to Mweka Gate (1,640m) & Celebration',
+        startElevation: 3950,
         endElevation: 1640,
         distanceKm: 13.5,
         hikingHours: '3-4 hours',
@@ -125,15 +122,12 @@ export const KILIMANJARO_ROUTES: Route[] = [
     accommodation: 'Camping',
     includedItems: [
       'All National Park entry, rescue & camping fees',
-      'Professional mountain guides & porters',
-      '3 fresh warm meals daily + trail snacks',
-      '4-season expedition tents & private mess tent',
-      'Pulse oximeter daily checks & emergency oxygen',
-      'Hotel transfers Moshi / Arusha'
+      'Professional mountain guides & porters'
+      
     ],
     elevationProfile: [
-      { day: 1, elevation: 2360, label: 'Londorossi Gate' },
-      { day: 1, elevation: 2650, label: 'Forest Camp' },
+      { day: 1, elevation: 2360, label: 'Londorossi Gate (The old Route)/Lemosho Gate' },
+      { day: 1, elevation: 2650, label: 'Mti Mkubwa' },
       { day: 2, elevation: 3610, label: 'Shira 1' },
       { day: 2, elevation: 3850, label: 'Shira 2' },
       { day: 3, elevation: 4600, label: 'Lava Tower' },
@@ -141,16 +135,17 @@ export const KILIMANJARO_ROUTES: Route[] = [
       { day: 4, elevation: 3960, label: 'Karanga Camp' },
       { day: 4, elevation: 4673, label: 'Barafu Camp' },
       { day: 5, elevation: 5895, label: 'Uhuru Peak' },
-      { day: 5, elevation: 3100, label: 'Mweka Camp' },
+      { day: 5, elevation: 3950, label: 'Millenium Camp' },
+      { day: 6, elevation: 3100, label: 'Mweka Camp' },
       { day: 6, elevation: 1640, label: 'Mweka Gate' }
     ],
     dailyItinerary: [
       {
         day: 1,
-        title: 'Londorossi Gate (2,360m) to Forest Camp / Mti Mkubwa (2,650m)',
+        title: 'Londorossi Gate (The old Route) (2,360m)/ Lemosho Gate to Forest Camp / Mti Mkubwa (2,650m)',
         startElevation: 2360,
         endElevation: 2650,
-        distanceKm: 6,
+        distanceKm: 7,
         hikingHours: '3-4 hours',
         habitat: 'Rainforest',
         description: 'Drive from Moshi to Londorossi Gate (2,360m) for registration, then trek through tranquil western rainforest to Forest Camp (2,650m).',
@@ -161,7 +156,7 @@ export const KILIMANJARO_ROUTES: Route[] = [
         title: 'Forest Camp (2,650m) via Shira 1 (3,610m) to Shira 2 Camp (3,850m)',
         startElevation: 2650,
         endElevation: 3850,
-        distanceKm: 13,
+        distanceKm: 17,
         hikingHours: '7-8 hours',
         habitat: 'Moorland',
         description: 'Ascend out of the forest onto the vast volcanic Shira Plateau, crossing past Shira 1 (3,610m) to establish camp at Shira 2 (3,850m).',
@@ -183,7 +178,7 @@ export const KILIMANJARO_ROUTES: Route[] = [
         title: 'Barranco Camp (3,900m) via Karanga (3,960m) to Barafu Base Camp (4,673m)',
         startElevation: 3900,
         endElevation: 4673,
-        distanceKm: 9,
+        distanceKm: 10,
         hikingHours: '7-9 hours',
         habitat: 'Alpine Desert',
         description: 'Scramble up the majestic Barranco Wall, traverse across Karanga Valley (3,960m), and climb to Barafu Camp (4,673m). Prepare gear for the midnight summit bid.',
@@ -191,10 +186,10 @@ export const KILIMANJARO_ROUTES: Route[] = [
       },
       {
         day: 5,
-        title: 'SUMMIT DAY: Barafu (4,673m) to Uhuru Peak (5,895m) to Mweka Camp (3,100m)',
+        title: 'SUMMIT DAY: Barafu (4,673m) to Uhuru Peak (5,895m) to Milenium Camp (3,950m)',
         startElevation: 4673,
-        endElevation: 3100,
-        distanceKm: 15,
+        endElevation: 3950,
+        distanceKm: 14,
         hikingHours: '11-15 hours',
         habitat: 'Arctic Summit',
         description: 'Midnight ascent up steep volcanic scree slopes to Stella Point at dawn. Push along the crater rim to Uhuru Peak (5,895m) before descending to Mweka Camp (3,100m).',
@@ -202,10 +197,10 @@ export const KILIMANJARO_ROUTES: Route[] = [
       },
       {
         day: 6,
-        title: 'Mweka Camp (3,100m) to Mweka Gate (1,640m) & Departure',
-        startElevation: 3100,
+        title: 'Milenium Camp (3,950m) to Mweka camp (3,100m) to Mweka Gate (1,640m) & Departure',
+        startElevation: 3950,
         endElevation: 1640,
-        distanceKm: 10,
+        distanceKm: 13.5,
         hikingHours: '3-4 hours',
         habitat: 'Rainforest',
         description: 'Descend through dense lush rainforest to Mweka Gate (1,640m). Receive your official Kilimanjaro National Park summit certificate.',
@@ -215,7 +210,7 @@ export const KILIMANJARO_ROUTES: Route[] = [
   },
   {
     id: 'shira',
-    name: 'Londorossi / Shira Route',
+    name: ' Shira Route',
     days: 6,
     difficulty: 'Challenging',
     successRate: 90,
@@ -231,11 +226,8 @@ export const KILIMANJARO_ROUTES: Route[] = [
     accommodation: 'Camping',
     includedItems: [
       'All National Park fees, rescue & camping fees',
-      'Professional mountain guides & crew',
-      '3 fresh hot meals daily + mountain snacks',
-      'Mountain Hardwear expedition tents',
-      'Daily medical checkups with pulse oximeter & oxygen',
-      '4x4 vehicle transfers to Morum Barrier / Londorossi'
+      'Professional mountain guides & crew'
+    
     ],
     elevationProfile: [
       { day: 1, elevation: 2360, label: 'Londorossi Gate' },
@@ -337,9 +329,6 @@ export const KILIMANJARO_ROUTES: Route[] = [
     includedItems: [
       'All National Park entry & camping fees',
       'Professional mountain guides & porter crew',
-      '3 hot nutritious meals daily + drinking water',
-      '4-season expedition tents & dining tent',
-      'Daily health monitoring with pulse oximeter & oxygen',
       'Transfers to Rongai Gate and from Marangu Gate'
     ],
     elevationProfile: [
@@ -440,11 +429,8 @@ export const KILIMANJARO_ROUTES: Route[] = [
     accommodation: 'Camping',
     includedItems: [
       'All National Park entry & camping fees',
-      'Professional mountain guides & porter crew',
-      '3 fresh warm meals daily + drinking water',
-      '4-season tents & mess tent',
-      'Pulse oximeter daily checks & emergency oxygen',
-      'Hotel transfers'
+      'Professional mountain guides & porter crew'
+      
     ],
     elevationProfile: [
       { day: 1, elevation: 1950, label: 'Rongai Gate' },
@@ -520,7 +506,7 @@ export const KILIMANJARO_ROUTES: Route[] = [
     days: 5,
     difficulty: 'Moderate',
     successRate: 85,
-    shortDescription: 'Classic 5-day Coca-Cola route with comfortable wooden sleeping huts.',
+    shortDescription: 'The classic route where you go and return using the same way',
     fullDescription: 'The Marangu Route is the classic trail on Kilimanjaro and the only route offering comfortable A-frame sleeping huts with mattress beds. Starting at Marangu Gate (1,870m), the 5-day itinerary climbs via Mandara Hut (2,700m) and Horombo Hut (3,720m) across the high alpine Saddle to Kibo Hut (4,703m) for the summit assault to Gillmans Point (5,685m) and Uhuru Peak (5,895m).',
     badgeText: 'CLASSIC HUT ROUTE',
     priceUSD: 1750,
@@ -532,11 +518,8 @@ export const KILIMANJARO_ROUTES: Route[] = [
     accommodation: 'Mountain Huts',
     includedItems: [
       'National Park entry, rescue & hut accommodation fees',
-      'Professional mountain guides & porter team',
-      '3 fresh meals daily served in dining huts',
-      'Mattress beds in wooden A-frame huts',
-      'Daily medical checkups with pulse oximeter',
-      'Hotel transfers Moshi / Arusha'
+      'Professional mountain guides & porter team'
+     
     ],
     elevationProfile: [
       { day: 1, elevation: 1870, label: 'Marangu Gate' },
@@ -565,7 +548,7 @@ export const KILIMANJARO_ROUTES: Route[] = [
         title: 'Mandara Hut (2,700m) to Horombo Hut (3,720m)',
         startElevation: 2700,
         endElevation: 3720,
-        distanceKm: 12,
+        distanceKm: 11,
         hikingHours: '6-7 hours',
         habitat: 'Moorland',
         description: 'Ascend into giant lobelia and heather moorland enjoying clear views of Mawenzi Peak and the Kibo summit cone, reaching Horombo Hut (3,720m).',
@@ -576,7 +559,7 @@ export const KILIMANJARO_ROUTES: Route[] = [
         title: 'Horombo Hut (3,720m) across The Saddle to Kibo Hut (4,703m)',
         startElevation: 3720,
         endElevation: 4703,
-        distanceKm: 10,
+        distanceKm: 9,
         hikingHours: '6-7 hours',
         habitat: 'Alpine Desert',
         description: 'Cross the barren high-altitude Saddle between Kibo and Mawenzi peaks, arriving at Kibo Hut (4,703m) stone base camp. Early dinner and rest for summit push.',
@@ -587,7 +570,7 @@ export const KILIMANJARO_ROUTES: Route[] = [
         title: 'SUMMIT DAY: Kibo Hut (4,703m) via Gillmans Point (5,685m) to Uhuru Peak (5,895m) to Horombo Hut (3,720m)',
         startElevation: 4703,
         endElevation: 3720,
-        distanceKm: 16,
+        distanceKm: 21,
         hikingHours: '11-14 hours',
         habitat: 'Arctic Summit',
         description: 'Midnight ascent up steep scree to Gillmans Point (5,685m) at sunrise, continuing along the crater rim to Uhuru Peak (5,895m). Descend back to Horombo Hut (3,720m).',
@@ -598,8 +581,8 @@ export const KILIMANJARO_ROUTES: Route[] = [
         title: 'Horombo Hut (3,720m) via Mandara (2,700m) to Marangu Gate (1,870m)',
         startElevation: 3720,
         endElevation: 1870,
-        distanceKm: 20,
-        hikingHours: '5-6 hours',
+        distanceKm: 28,
+        hikingHours: '6-8 hours',
         habitat: 'Rainforest',
         description: 'Descend through moorland and lush forest to Marangu Gate (1,870m). Receive official green or gold summit certificates and transfer to hotel.',
         highlights: ['Official Certificate Ceremony', 'Porters celebration song', 'Hotel transfer & hot shower']
@@ -624,11 +607,8 @@ export const KILIMANJARO_ROUTES: Route[] = [
     accommodation: 'Camping',
     includedItems: [
       'All National Park entry, rescue & camping fees',
-      'Professional mountain guides & crew',
-      '3 high-energy meals daily + boiled water',
-      'Expedition 4-season tents & mess tent',
-      'Pulse oximeter daily checks & emergency oxygen',
-      'Hotel transfers Moshi / Arusha'
+      'Professional mountain guides & crew'
+     
     ],
     elevationProfile: [
       { day: 1, elevation: 1600, label: 'Umbwe Gate' },
@@ -637,7 +617,8 @@ export const KILIMANJARO_ROUTES: Route[] = [
       { day: 3, elevation: 3960, label: 'Karanga Camp' },
       { day: 3, elevation: 4673, label: 'Barafu Camp' },
       { day: 4, elevation: 5895, label: 'Uhuru Peak' },
-      { day: 4, elevation: 3100, label: 'Mweka Camp' },
+      { day: 4, elevation: 3950, label: 'Milenium Camp' },
+      { day: 5, elevation: 3100, label: 'Mweka Camp' },
       { day: 5, elevation: 1640, label: 'Mweka Gate' }
     ],
     dailyItinerary: [
@@ -646,7 +627,7 @@ export const KILIMANJARO_ROUTES: Route[] = [
         title: 'Umbwe Gate (1,600m) to Umbwe Caves Camp (2,850m)',
         startElevation: 1600,
         endElevation: 2850,
-        distanceKm: 8,
+        distanceKm: 11,
         hikingHours: '5-6 hours',
         habitat: 'Rainforest & Ridge',
         description: 'Trek from Umbwe Gate (1,600m) up a steep forested ridge between the Lonzo and Umbwe rivers, camping at Umbwe Caves Camp (2,850m).',
@@ -665,7 +646,7 @@ export const KILIMANJARO_ROUTES: Route[] = [
       },
       {
         day: 3,
-        title: 'Barranco Camp (3,900m) via Karanga (3,960m) to Barafu Base Camp (4,673m)',
+        title: 'Karanga (3,960m) to Barafu Base Camp (4,673m)',
         startElevation: 3900,
         endElevation: 4673,
         distanceKm: 9,
@@ -676,10 +657,10 @@ export const KILIMANJARO_ROUTES: Route[] = [
       },
       {
         day: 4,
-        title: 'SUMMIT DAY: Barafu (4,673m) to Uhuru Peak (5,895m) to Mweka Camp (3,100m)',
+        title: 'SUMMIT DAY: Barafu (4,673m) to Uhuru Peak (5,895m) to Milenium Camp (3,950m)',
         startElevation: 4673,
-        endElevation: 3100,
-        distanceKm: 15,
+        endElevation: 3950,
+        distanceKm: 14,
         hikingHours: '11-15 hours',
         habitat: 'Arctic Summit',
         description: 'Midnight push via Stella Point to Uhuru Peak (5,895m) at dawn. Celebrate summit success and descend to Mweka Camp (3,100m).',
@@ -687,10 +668,10 @@ export const KILIMANJARO_ROUTES: Route[] = [
       },
       {
         day: 5,
-        title: 'Mweka Camp (3,100m) to Mweka Gate (1,640m) & Transfer',
+        title: 'Milenium Camp (3,950m) via Mweka Camp (3,100m) to Mweka Gate (1,640m) & Transfer',
         startElevation: 3100,
         endElevation: 1640,
-        distanceKm: 10,
+        distanceKm: 13.5,
         hikingHours: '3-4 hours',
         habitat: 'Rainforest',
         description: 'Descend through dense rainforest to Mweka Gate (1,640m). Receive official summit certificates and return to hotel.',
@@ -700,7 +681,7 @@ export const KILIMANJARO_ROUTES: Route[] = [
   },
   {
     id: 'northern-circuit',
-    name: 'Northern Circuit',
+    name: 'Northern Circuit/ Lemosho long days',
     days: 9,
     difficulty: 'Challenging',
     successRate: 98,
@@ -716,11 +697,7 @@ export const KILIMANJARO_ROUTES: Route[] = [
     accommodation: 'Camping',
     includedItems: [
       'All National Park entry, rescue & camping fees',
-      'Professional mountain guides & crew',
-      '3 fresh warm meals daily + snacks & boiled water',
-      '4-season expedition tents & private mess tent',
-      'Pulse oximeter daily checks & emergency oxygen',
-      'Pre & post climb hotel transfers'
+      'Professional mountain guides & crew'
     ],
     elevationProfile: [
       { day: 1, elevation: 2360, label: 'Londorossi Gate' },
@@ -733,7 +710,8 @@ export const KILIMANJARO_ROUTES: Route[] = [
       { day: 7, elevation: 4800, label: 'School Hut' },
       { day: 8, elevation: 5685, label: 'Gillmans Point' },
       { day: 8, elevation: 5895, label: 'Uhuru Peak' },
-      { day: 8, elevation: 3100, label: 'Mweka Camp' },
+      { day: 8, elevation: 3950, label: 'Milenium Camp' },
+      { day: 9, elevation: 3100, label: 'Mweka Camp' },
       { day: 9, elevation: 1640, label: 'Mweka Gate' }
     ],
     dailyItinerary: [
@@ -742,7 +720,7 @@ export const KILIMANJARO_ROUTES: Route[] = [
         title: 'Londorossi Gate (2,360m) to Forest Camp / Mti Mkubwa (2,650m)',
         startElevation: 2360,
         endElevation: 2650,
-        distanceKm: 6,
+        distanceKm: 7,
         hikingHours: '3-4 hours',
         habitat: 'Rainforest',
         description: 'Trek from Londorossi Gate (2,360m) through undisturbed rainforest to Forest Camp (2,650m).',
@@ -753,7 +731,7 @@ export const KILIMANJARO_ROUTES: Route[] = [
         title: 'Forest Camp (2,650m) to Shira 1 Camp (3,610m)',
         startElevation: 2650,
         endElevation: 3610,
-        distanceKm: 8,
+        distanceKm: 7,
         hikingHours: '5-6 hours',
         habitat: 'Moorland',
         description: 'Climb onto the expansive Shira Plateau with open big-sky horizons and views of Mt. Meru.',
@@ -775,7 +753,7 @@ export const KILIMANJARO_ROUTES: Route[] = [
         title: 'Shira 2 (3,850m) to Moir Hut (4,200m)',
         startElevation: 3850,
         endElevation: 4200,
-        distanceKm: 14,
+        distanceKm: 6,
         hikingHours: '5-7 hours',
         habitat: 'Alpine Desert',
         description: 'Turn north into the Lent Hills area camping near Moir Hut (4,200m).',
@@ -808,7 +786,7 @@ export const KILIMANJARO_ROUTES: Route[] = [
         title: 'Third Cave (3,600m) to School Hut (4,800m)',
         startElevation: 3600,
         endElevation: 4800,
-        distanceKm: 5,
+        distanceKm: 10,
         hikingHours: '4-5 hours',
         habitat: 'Alpine Desert',
         description: 'Ascend to School Hut (4,800m) base camp. Rest early for midnight summit bid.',
@@ -816,9 +794,9 @@ export const KILIMANJARO_ROUTES: Route[] = [
       },
       {
         day: 8,
-        title: 'SUMMIT DAY: School Hut (4,800m) via Gillmans Point (5,685m) to Uhuru Peak (5,895m) to Mweka Camp (3,100m)',
+        title: 'SUMMIT DAY: School Hut (4,800m) via Gillmans Point (5,685m) to Uhuru Peak (5,895m) to Milenium Camp (3,950m)',
         startElevation: 4800,
-        endElevation: 3100,
+        endElevation: 3950,
         distanceKm: 16,
         hikingHours: '11-15 hours',
         habitat: 'Arctic Summit',
@@ -827,10 +805,10 @@ export const KILIMANJARO_ROUTES: Route[] = [
       },
       {
         day: 9,
-        title: 'Mweka Camp (3,100m) to Mweka Gate (1,640m)',
-        startElevation: 3100,
+        title: 'Milenium Camp (3,950m) to Mweka Camp (3,100m) to Mweka Gate (1,640m)',
+        startElevation: 3950,
         endElevation: 1640,
-        distanceKm: 10,
+        distanceKm: 13.5,
         hikingHours: '3-4 hours',
         habitat: 'Rainforest',
         description: 'Final rainforest walk, certificate collection ceremony, and victory celebration.',
