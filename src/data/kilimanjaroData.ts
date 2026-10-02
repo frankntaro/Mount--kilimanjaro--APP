@@ -437,11 +437,11 @@ export const KILIMANJARO_ROUTES: Route[] = [
       { day: 1, elevation: 1950, label: 'Rongai Gate' },
       { day: 1, elevation: 3450, label: 'Remote Cave' },
       { day: 2, elevation: 3600, label: 'Kikelewa Cave' },
-      { day: 3, elevation: 4800, label: 'School Hut' },
-      { day: 4, elevation: 5685, label: 'Gillmans Point' },
-      { day: 4, elevation: 5895, label: 'Uhuru Peak' },
-      { day: 4, elevation: 3720, label: 'Horombo Hut' },
-      { day: 5, elevation: 1870, label: 'Marangu Gate' }
+      { day: 3, elevation: 3100, label: 'Mawenzi Tarn Camp' },
+      { day: 4, elevation: 3100, label: 'Kibo Camp' },
+      { day: 5, elevation: 5895, label: 'Uhuru Peak' },
+      { day: 6, elevation: 3720, label: 'Horombo Hut' },
+      { day: 7, elevation: 1870, label: 'Marangu Gate' }
     ],
     dailyItinerary: [
       {
@@ -468,10 +468,10 @@ export const KILIMANJARO_ROUTES: Route[] = [
       },
       {
         day: 3,
-        title: 'Kikelewa Cave (3,600m) across The Saddle to School Hut (4,800m)',
+        title: 'Kikelewa Cave (3,600m) to Mawenzi Tarn (4,800m)',
         startElevation: 3600,
         endElevation: 4800,
-        distanceKm: 10,
+        distanceKm: 4,
         hikingHours: '6-7 hours',
         habitat: 'Alpine Desert',
         description: 'Ascend out of Kikelewa across the expansive Saddle alpine desert to School Hut (4,800m) base camp. Rest early for summit night.',
@@ -479,17 +479,39 @@ export const KILIMANJARO_ROUTES: Route[] = [
       },
       {
         day: 4,
-        title: 'SUMMIT DAY: School Hut (4,800m) via Gillmans Point (5,685m) to Uhuru Peak (5,895m) to Horombo Hut (3,720m)',
+        title: 'SUMMIT DAY: Mawenzi Tarn (4,800m) to Kibo Hut (5,895m)',
         startElevation: 4800,
-        endElevation: 3720,
-        distanceKm: 16,
-        hikingHours: '11-14 hours',
+        endElevation: 3895,
+        distanceKm: 8,
+        hikingHours: '2-4 hours',
         habitat: 'Arctic Summit',
         description: 'Midnight ascent to Gillmans Point (5,685m) on the crater rim at dawn, pushing to Uhuru Peak (5,895m) before descending to Horombo Hut (3,720m).',
         highlights: ['Gillmans Point sunrise', 'Uhuru Peak summit 5,895m', 'Horombo Hut rest']
       },
       {
         day: 5,
+        title: 'Kibo Hut (4,703m) to Uhuru Peak (5,895m)',
+        startElevation: 4703,
+        endElevation: 5895,
+        distanceKm: 6,
+        hikingHours: '5-6 hours',
+        habitat: 'Rainforest',
+        description: 'Descend through moorland and rainforest past Mandara Hut (2,700m) to Marangu Gate (1,870m) to receive official summit certificates.',
+        highlights: ['Summit Certificates', 'Final celebration with guides', 'Hotel transfer']
+      },
+         {
+        day: 6,
+        title: 'Uhuru Peak (5,895m) to Horombo Hut (3,720m)',
+        startElevation: 5895,
+        endElevation: 3720,
+        distanceKm: 15,
+        hikingHours: '5-6 hours',
+        habitat: 'Rainforest',
+        description: 'Descend through moorland and rainforest past Mandara Hut (2,700m) to Marangu Gate (1,870m) to receive official summit certificates.',
+        highlights: ['Summit Certificates', 'Final celebration with guides', 'Hotel transfer']
+      },
+         {
+        day: 7,
         title: 'Horombo Hut (3,720m) to Marangu Gate (1,870m)',
         startElevation: 3720,
         endElevation: 1870,
