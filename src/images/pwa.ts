@@ -3,7 +3,7 @@ import { ImageAsset } from './types';
 export const PWA_IMAGES: Record<string, ImageAsset> = {
   logoSvg: {
     id: 'pwa_logo_svg',
-    url: new URL('./MM.LOGO.jpeg', import.meta.url).href,
+    url: new URL('./MM.LOGO.jpg', import.meta.url).href,
     alt: 'Vamos Kilimanjaro Vector Logo',
     caption: 'Official Vamos Kilimanjaro Expedition Emblem',
     category: 'pwa',
